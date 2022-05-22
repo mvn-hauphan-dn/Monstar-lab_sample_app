@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light border-top">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <span class="navbar-text">
+      The <a class="text-decoration-none" href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> 
+      by <a class="text-decoration-none" href="https://www.michaelhartl.com/">Michael Hartl</a>
+      </span>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "About", about_path, class: "nav-link text-decoration-none" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", contact_path, class: "nav-link text-decoration-none" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "News", "https://news.railstutorial.org/", class: "nav-link text-decoration-none" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
