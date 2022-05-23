@@ -1,25 +1,32 @@
 <% provide(:title, "Log in") %>
 <h1 class="text-center display-1">Log in</h1>
 
-<%= form_for(:session, url: login_path) do |f| %>
-  <div class="mb-3">
-    <%= f.label :email, class: "form-label" %>
-    <%= f.email_field :email, class: "form-control" %>
-  </div>
+<div class="row justify-content-center">
+  <div style="width: 50%">
+    <%= form_for(:session, url: login_path) do |f| %>
+      <div class="mb-3">
+        <%= f.label :email, class: "form-label" %>
+        <%= f.email_field :email, class: "form-control" %>
+      </div>
 
-  <div class="mb-3">
-    <%= f.label :password, class: "form-label" %>
-    <%= f.password_field :password, class: "form-control" %>
-  </div>
+      <div class="mb-3">
+        <%= f.label :password, class: "form-label" %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
 
-  <%= f.label :remember_me, class: "checkbox inline" do %>
-    <%= f.check_box :remember_me %>
-    <span>Remember me on this computer</span>
-  <% end %>
+      <div class="mb-3">
+        <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>Remember me on this computer</span>
+        <% end %>
+      </div>
 
-  <div class="mb-3 text-center">
-    <%= f.submit "Log in", class: "btn btn-primary" %>
+      <div class="mb-3 text-center">
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>
-<% end %>
-<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+</div>
+
 
