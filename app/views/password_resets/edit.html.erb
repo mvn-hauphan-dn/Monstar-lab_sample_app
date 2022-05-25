@@ -2,19 +2,19 @@
 <h1 class="text-center display-1">Reset password</h1>
 
 <div class="row justify-content-center">
-  <div style="width: 50%">
+  <div class="col-6">
     <%= form_with url: password_reset_path(params[:id]), method: :patch do |f| %>
       <%= f.hidden_field :email, value: @user.email %>
       <div class="mb-3">
         <%= f.label :password, class: "form-label" %>
         <%= f.password_field :password, class: "form-control" %>
-        <div class="form-text" style="color: red"><%= @user.errors.full_messages_for(:password).first %></div>
+        <div class="form-text text-danger"><%= @user.errors.full_messages_for(:password).first %></div>
       </div>
 
       <div class="mb-3">
         <%= f.label :password_confirmation, "Confirmation", class: "form-label" %>
         <%= f.password_field :password_confirmation, class: "form-control" %>
-        <div class="form-text" style="color: red"><%= @user.errors.full_messages_for(:password_confirmation).first %></div>
+        <div class="form-text text-danger" ><%= @user.errors.full_messages_for(:password_confirmation).first %></div>
       </div>
 
       <div class="mb-3 text-center">
