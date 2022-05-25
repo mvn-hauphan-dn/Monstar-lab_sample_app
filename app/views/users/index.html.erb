@@ -1,0 +1,8 @@
+<% provide(:title, 'All users') %>
+<h1 class="text-center display-1">All users</h1>
+
+<ul>
+  <%= render @users %>
+</ul>
+
+<%= paginate @users, window: 2, theme: 'bootstrap-5' %>
